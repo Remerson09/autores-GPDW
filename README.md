@@ -1,5 +1,5 @@
 ﻿# autores-GPDW
-Claro! Vamos analisar essa função JavaScript linha por linha:
+
 
 Função adicionaInputAutor
 javascript
