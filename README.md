@@ -1,4 +1,5 @@
 Gerenciador de Livros
+
 Este projeto é um gerenciador de livros simples, que permite adicionar livros com título, ano, preço e autores. Também permite deletar livros da lista.
 
 Funções do Código
@@ -10,8 +11,8 @@ function adicionaInputAutor() {
     const pai = document.getElementById("containerAutores");
     const novoInput = document.createElement("input");
     novoInput.setAttribute("placeholder", "Autor");
-    pai.insertBefore(novoInput, document.getElementById("btAdicionarAutor"));
-}
+    pai.insertBefore(novoInput, document.getElementById("btAdicionarAutor")); }
+    
 Declaração da Função
 A função adicionaInputAutor é declarada e será chamada quando o botão de adicionar autor for clicado.
 
@@ -39,6 +40,7 @@ inserir
 Esta função captura os valores do formulário e cria um novo artigo na lista de livros.
 
 javascript
+
 function inserir() {
     const titulo = document.getElementById("titulo").value;
     const ano = document.getElementById("ano").value;
@@ -53,6 +55,7 @@ function inserir() {
     document.getElementById("livrosForm").reset();
     removerExcessoDeInputsAutor();
 }
+
 Capturando Valores dos Inputs
 Captura os valores dos campos de entrada do formulário.
 
@@ -72,6 +75,7 @@ coletarAutores
 Esta função coleta todos os autores inseridos no formulário.
 
 javascript
+
 function coletarAutores() {
     const autoresInputs = document.querySelectorAll("#containerAutores input[placeholder=Autor]");
     const autores = [];
@@ -80,6 +84,7 @@ function coletarAutores() {
     }
     return autores;
 }
+
 criarArtigo
 Esta função cria um novo elemento de artigo com título, lista de autores, ano, preço e um botão para deletar.
 
@@ -93,7 +98,9 @@ function criarArtigo(titulo, autores, ano, preco) {
     artigo.appendChild(criarBotaoDeletar(artigo));
     return artigo;
 }
+
 criarTitulo
+
 Cria um elemento <h2> para o título do artigo.
 
 javascript
